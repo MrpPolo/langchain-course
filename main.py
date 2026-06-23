@@ -27,7 +27,8 @@ def main():
 
     chain = summary_prompt_template | llm
 
-    print(chain.invoke({"information": information}))
+    response = chain.invoke({"information": information})
+    print(response.content)
 
 
 if __name__ == "__main__":
